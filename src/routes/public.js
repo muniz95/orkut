@@ -1,16 +1,9 @@
-import Base from "../Base";
-import Main from "../views/Main";
-import Login from "../views/Login";
-import { Route } from "inferno-router";
+import React from 'react'
+import Home from "../views/Home"
+import Login from "../views/Login"
+import { Route } from 'react-router-dom'
 
-const handleRoute = e => {
-  if (window.closeDrawer) window.closeDrawer();
-  this.currentUrl = e.url;
-};
-
-export default (
-  <Route onChange={handleRoute} component={Base}>
-    <Route path="/" component={Main} />
-    <Route path="/login" component={Login} />
-  </Route>
-)
+export default ([
+  <Route exact path='/' component={Home} key="home" />,
+  <Route path='/login' component={Login} key="login" />
+])

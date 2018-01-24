@@ -5,17 +5,18 @@
   "dependencies": {
     "bulma": "^0.6.2",
     "font-awesome": "^4.7.0",
-    "inferno": "^3.10.1",
-    "inferno-component": "^3.10.1",
-    "inferno-redux": "^3.10.1",
-    "inferno-router": "^3.10.1",
-    "inferno-scripts": "5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.0",
     "redux": "^3.7.2"
   },
   "scripts": {
-    "start": "inferno-scripts start",
-    "build": "inferno-scripts build",
-    "test": "inferno-scripts test --env=jsdom",
-    "eject": "inferno-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

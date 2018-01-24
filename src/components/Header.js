@@ -1,39 +1,53 @@
-import Component from 'inferno-component'
-import { Link } from 'inferno-router'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { logout } from '../modules/actions'
 import '../styles/Header.css'
 
 class Header extends Component {
   render() {
+    const { auth } = this.props
+    const btnAuth = auth
+    ?
+      <button className="button is-text" onClick={this.props.dispatchLogout}>
+        <span className="icon">
+          <i className="fa fa-sign-out"></i>
+        </span>
+        <span>Sair</span>
+      </button>
+    :
+      <Link className="button is-text" to="/login">
+        <span className="icon">
+          <i className="fa fa-sign-in"></i>
+        </span>
+        <span>Entrar</span>
+      </Link>
+      
     return (
-      <nav class="navbar header is-fixed-top">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+      <nav className="navbar header is-fixed-top">
+        <div className="navbar-brand">
+          <Link className="navbar-item" to="/">
             Orkut
-          </a>
-          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          </Link>
+          <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
 
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-start">
-            {/* <a class="navbar-item" href="https://bulma.io/">
+        <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div className="navbar-start">
+            {/* <a className="navbar-item" href="https://bulma.io/">
               Home
             </a> */}
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <Link class="button is-text" to={"/login"}>
-                    <span class="icon">
-                      <i class="fa fa-sign-in"></i>
-                    </span>
-                    <span>Entrar</span>
-                  </Link>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="field is-grouped">
+                <p className="control">
+                  {btnAuth}
                 </p>
               </div>
             </div>
@@ -44,4 +58,17 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = (state) => {
+  const { auth } = state
+  return {
+    auth
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  dispatchLogout: () => {
+    dispatch(logout())
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

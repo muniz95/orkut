@@ -1,6 +1,6 @@
-import Component from 'inferno-component'
+import React, { Component } from 'react'
 import { login } from '../modules/actions'
-import { connect } from 'inferno-redux'
+import { connect } from 'react-redux'
 
 class Login extends Component {
   constructor(props) {
@@ -33,46 +33,46 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <div class="columns">
-          <div class="column is-half-desktop">
-            <div class="field">
-              <label class="label">Username</label>
-              <div class="control has-icons-left has-icons-right">
+        <div className="columns">
+          <div className="column is-half-desktop">
+            <div className="field">
+              <label className="label">Username</label>
+              <div className="control has-icons-left has-icons-right">
                 <input
-                  class="input"
+                  className="input"
                   id="username"
                   type="text"
                   onChange={this.setField}
                 />
-                <span class="icon is-small is-left">
-                  <i class="fa fa-user" />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-user" />
                 </span>
               </div>
             </div>
 
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control has-icons-left has-icons-right">
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control has-icons-left has-icons-right">
                 <input
-                  class="input"
+                  className="input"
                   id="password"
                   type="password"
                   onChange={this.setField}
                 />
-                <span class="icon is-small is-left">
-                  <i class="fa fa-key" />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-key" />
                 </span>
               </div>
             </div>
 
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-primary" onClick={this.login}>
+            <div className="field is-grouped">
+              <div className="control">
+                <button className="button is-primary" onClick={this.login}>
                   Login
                 </button>
               </div>
-              <div class="control">
-                <button class="button is-text">Forgot your password?</button>
+              <div className="control">
+                <button className="button is-text">Forgot your password?</button>
               </div>
             </div>
           </div>

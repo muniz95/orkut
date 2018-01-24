@@ -1,16 +1,16 @@
 import Base from "../Base";
 import Main from "../views/Main";
 import Login from "../views/Login";
-import { Router, Route } from "inferno-router";
-import createBrowserHistory from "history/createBrowserHistory";
+import { Route } from "inferno-router";
 
-const browserHistory = createBrowserHistory();
+const handleRoute = (e) => {
+  if (window.closeDrawer) window.closeDrawer();
+  this.currentUrl = e.url;
+};
 
 export default (
-  <Router history={browserHistory}>
-    <Route component={Base}>
-      <Route path="/" component={Main} />
-      <Route path="/login" component={Login} />
-    </Route>
-  </Router>
+  <Route onChange={handleRoute} component={Base}>
+    <Route path="/" component={Main} />
+    <Route path="/login" component={Login} />
+  </Route>
 );

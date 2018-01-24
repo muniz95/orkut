@@ -1,10 +1,11 @@
+import { LOGIN, LOGOUT } from '../constants'
 import { combineReducers } from 'redux'
 
 const auth = (state = false, action) => {
   switch (action.type) {
-    case 'LOGIN':
+    case LOGIN:
       return true
-    case 'LOGOUT':
+    case LOGOUT:
       return false
     default:
       return state

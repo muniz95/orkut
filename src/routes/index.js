@@ -1,40 +1,19 @@
-import Base from '../Base'
-import Main from '../views/Main'
-// import Edition from '../views/Edition'
-// import Quiz from '../views/Quiz'
+import PrivateRoutes from './private'
+import PublicRoutes from './public'
 import Component from 'inferno-component'
-import { Router, Route, IndexRoute } from 'inferno-router'
 import { connect } from 'inferno-redux'
-import createBrowserHistory from 'history/createBrowserHistory'
-
-const browserHistory = createBrowserHistory()
 
 class Routes extends Component {
-
-    render() {
-        const { auth } = this.props
-        const routes = auth
-        ?
-            <Router history={ browserHistory }>
-                <Route component={ Base }>
-                    <IndexRoute component={ Main } />
-                </Route>
-            </Router>
-        :
-            <Router history={ browserHistory }>
-                <Route component={ Base }>
-                    <IndexRoute component={ Main } />
-                </Route>
-            </Router>
-        
-        return routes
-    }
+  render() {
+    const { auth } = this.props
+    return auth ? PrivateRoutes : PublicRoutes
+  }
 }
 
 const mapStateToProps = (state) => {
-  const { goal } = state
+  const { auth } = state
   return {
-    goal
+    auth
   }
 }
 

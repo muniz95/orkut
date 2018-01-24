@@ -1,6 +1,6 @@
 {
-  "short_name": "Inferno App",
-  "name": "Create Inferno App Sample",
+  "short_name": "Orkut",
+  "name": "sdds orkut",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ED2590",
+  "background_color": "#D4DDED"
 }

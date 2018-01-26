@@ -10,30 +10,26 @@ export default function ProfileSidebar(props) {
             <a href="/" className="">Editar perfil</a>
           </li>
           <li>
-            {/* <a href="/" className="is-active">
-              <span className="icon">
-                <i className="fa fa-table" />
-              </span> Links
-            </a> */}
-
-            <ul>
-              <li>
-                <a href="/">Perfil</a>
-              </li>
-              <li>
-                <a href="/">Recados</a>
-              </li>
-              <li>
-                <a href="/">Fotos</a>
-              </li>
-              <li>
-                <a href="/">Vídeos</a>
-              </li>
-              <li>
-                <a href="/">Depoimentos</a>
-              </li>
-            </ul>
+            <a href="/">Perfil</a>
           </li>
+          <li>
+            <a href="/">Recados</a>
+          </li>
+          <li>
+            <a href="/">Fotos</a>
+          </li>
+          <li>
+            <a href="/">Vídeos</a>
+          </li>
+          <li>
+            <a href="/">Depoimentos</a>
+          </li>
+          {/* <a href="/" className="is-active">
+            <span className="icon">
+              <i className="fa fa-table" />
+            </span> Links
+          </a> */}
+          <hr />
           <li>
             <a href="/" className="">Gerenciar trecos</a>
           </li>

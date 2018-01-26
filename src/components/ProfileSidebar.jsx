@@ -4,7 +4,8 @@ export default function ProfileSidebar(props) {
   return (
     <section className="main-content columns is-fullheight">
       <aside className="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <p className="menu-label is-hidden-touch">Navigation</p>
+        <p className="menu-label is-hidden-touch">FOTO</p>
+        <p className="menu-label is-hidden-touch">EU</p>
         <ul className="menu-list">
           <li>
             <a href="/" className="">Editar perfil</a>

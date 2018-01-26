@@ -1,3 +1,12 @@
+var closeMenuBar = function() {
+  var $target = document.getElementById('navbarExampleTransparentExample');
+  var $btnMenu = document.getElementById('btnMenu');
+  if ($target.classList.contains('is-active')) {
+    $target.classList.toggle('is-active');
+    $btnMenu.classList.toggle('is-active');
+  }
+};
+
 if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
   
@@ -24,14 +33,11 @@ if (typeof window !== 'undefined') {
     }
     
     var $backdrop = document.getElementById('main-section');
-    $backdrop.addEventListener('click', function() {
-      var $target = document.getElementById('navbarExampleTransparentExample');
-      var $btnMenu = document.getElementById('btnMenu');
-      if ($target.classList.contains('is-active')) {
-        $target.classList.toggle('is-active');
-        $btnMenu.classList.toggle('is-active');
-      }
-    })
+    $backdrop.addEventListener('click', closeMenuBar)
+    var $itemsMenu = document.querySelectorAll('.close-menu');
+    $itemsMenu.forEach(function ($el) {
+      $el.addEventListener('click', closeMenuBar);
+    });
   
   });
 }

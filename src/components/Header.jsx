@@ -9,14 +9,14 @@ class Header extends Component {
     const { auth } = this.props
     const btnAuth = auth
     ?
-      <button className="button is-text" onClick={this.props.dispatchLogout}>
+      <button className="button is-text close-menu" onClick={this.props.dispatchLogout}>
         <span className="icon">
           <i className="fa fa-sign-out"></i>
         </span>
         <span>Sair</span>
       </button>
     :
-      <Link className="button is-text" to="/login">
+      <Link className="button is-text close-menu" to="/login">
         <span className="icon">
           <i className="fa fa-sign-in"></i>
         </span>

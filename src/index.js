@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css'
 import 'font-awesome/css/font-awesome.min.css'
+import './DOMEvents'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'

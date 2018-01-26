@@ -12,7 +12,7 @@ class Routes extends Component {
       <Router>
         <div>
           <Header />
-          <section className="section">
+          <section className="section" id="main-section">
             <div className="container">
               <Switch>
                 {routes}

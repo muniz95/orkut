@@ -29,7 +29,7 @@ class Header extends Component {
           <Link className="navbar-item" to="/">
             Orkut
           </Link>
-          <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <div className="navbar-burger burger" data-target="navbarExampleTransparentExample" id="btnMenu">
             <span></span>
             <span></span>
             <span></span>

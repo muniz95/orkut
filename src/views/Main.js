@@ -26,8 +26,8 @@ export default class Main extends Component {
             </p>
           </div>
           <div className="column is-3">
-            <p>Amigos (0)</p>
-            <p>Comunidades (0)</p>
+            <p className="round-box">Amigos (0)</p>
+            <p className="round-box">Comunidades (0)</p>
           </div>
         </div>
       </ProfileSidebar>

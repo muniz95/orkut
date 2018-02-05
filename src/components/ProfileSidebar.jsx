@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/ProfileSidebar.css'
 
 export default function ProfileSidebar(props) {
@@ -9,43 +10,43 @@ export default function ProfileSidebar(props) {
         <p className="menu-label is-hidden-touch">EU</p>
         <ul className="menu-list">
           <li>
-            <a href="/" className="">Editar perfil</a>
+            <Link to="/" className="">Editar perfil</Link>
           </li>
           <li>
-            <a href="/profile">Perfil</a>
+            <Link to="/profile">Perfil</Link>
           </li>
           <li>
-            <a href="/">Recados</a>
+            <Link to="/">Recados</Link>
           </li>
           <li>
-            <a href="/">Fotos</a>
+            <Link to="/">Fotos</Link>
           </li>
           <li>
-            <a href="/">Vídeos</a>
+            <Link to="/">Vídeos</Link>
           </li>
           <li>
-            <a href="/">Depoimentos</a>
+            <Link to="/">Depoimentos</Link>
           </li>
-          {/* <a href="/" className="is-active">
+          {/* <Link to="/" className="is-activeLink>
             <span className="icon">
               <i className="fa fa-table" />
             </span> Links
           </a> */}
           <hr />
           <li>
-            <a href="/" className="">Gerenciar trecos</a>
+            <Link to="/" className="">Gerenciar trecos</Link>
           </li>
           <li>
-            <a href="/" className="">Listas</a>
+            <Link to="/" className="">Listas</Link>
           </li>
           <li>
-            <a href="/" className="">Mensagens</a>
+            <Link to="/" className="">Mensagens</Link>
           </li>
           <li>
-            <a href="/" className="">Atualizações</a>
+            <Link to="/" className="">Atualizações</Link>
           </li>
           <li>
-            <a href="/" className="">Configurações</a>
+            <Link to="/" className="">Configurações</Link>
           </li>
         </ul>
       </aside>

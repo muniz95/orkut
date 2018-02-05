@@ -15,8 +15,18 @@ export default class Main extends Component {
               <span>Fãs&nbsp;</span>
             </p>
             <p>
-              <b>Sorte de hoje:</b> Você é observador e analítico por natureza
+              <span>0</span>
+              <span>0</span>
+              <span>0</span>
             </p>
+            <div className="tabs">
+              <ul>
+                <li className="is-active"><a>Social</a></li>
+              </ul>
+            </div>
+            <div className="tab-details">
+              <p>Quem sou eu:</p>
+            </div>
           </div>
           <div className="column is-3">
             <p className="round-box">Amigos (0)</p>

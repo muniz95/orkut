@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/ProfileSidebar.css'
 
 export default function ProfileSidebar(props) {
   return (
@@ -11,7 +12,7 @@ export default function ProfileSidebar(props) {
             <a href="/" className="">Editar perfil</a>
           </li>
           <li>
-            <a href="/">Perfil</a>
+            <a href="/profile">Perfil</a>
           </li>
           <li>
             <a href="/">Recados</a>

@@ -16,7 +16,7 @@ export default function ProfileSidebar(props) {
             <Link to="/profile">Perfil</Link>
           </li>
           <li>
-            <Link to="/">Recados</Link>
+            <Link to="/messages">Recados</Link>
           </li>
           <li>
             <Link to="/">Fotos</Link>

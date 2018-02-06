@@ -13,6 +13,10 @@ export default class Main extends Component {
               <button className="button is-primary">Enviar</button>
               <button className="button is-secondary">Visualizar</button>
             </div>
+            <div>&nbsp;</div>
+            <div>
+              <h1>Minha página de recados</h1>
+            </div>
           </div>
         </div>
       </ProfileSidebar>

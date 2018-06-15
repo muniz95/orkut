@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ProfileSidebar from "../components/ProfileSidebar";
-import '../styles/Main.css'
+import '../styles/Main.scss'
 
 export default class Main extends Component {
   render() {

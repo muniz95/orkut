@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/ProfileSidebar.css'
+import '../styles/ProfileSidebar.scss'
 
 export default function ProfileSidebar(props) {
   return (

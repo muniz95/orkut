@@ -17,8 +17,8 @@ class Login extends Component {
   login() {
     const { username, password } = this.state
     if (username === password) {
-      this.props.dispatchLogin()
-      // this.props.history.push("/")
+			this.props.dispatchLogin()
+      this.props.history.replace("/")
     } else {
       alert("Usuário ou senha incorretos!")
     }

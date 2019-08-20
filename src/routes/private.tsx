@@ -7,8 +7,10 @@ import { Route } from 'react-router-dom'
 
 export default (
   <PrivateLayout>
-    <Route exact path='/' component={Main} key="main" />
-    <Route path='/profile' component={Profile} key="profile" />
-    <Route path='/messages' component={Messages} key="messages" />
+    <React.Fragment>
+      <Route exact path='/' component={Main} key="main" />
+      <Route path='/profile' component={Profile} key="profile" />
+      <Route path='/messages' component={Messages} key="messages" />
+    </React.Fragment>
   </PrivateLayout>
 )

@@ -1,33 +1,43 @@
-import React, { Component } from 'react'
-import { login } from '../modules/actions'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { login } from '../modules/actions';
+import { connect } from 'react-redux';
+import { RouteComponentProps } from 'react-router';
 
-class Login extends Component {
-  constructor(props) {
-    super(props)
+interface IProps extends RouteComponentProps<any> {
+  dispatchLogin: () => void;
+}
+
+interface IState {
+  username: string;
+  password: string;
+}
+
+class Login extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
 
     this.state = {
+      password: "",
       username: "",
-      password: ""
-    }
+    };
 
-    this.login = this.login.bind(this)
+    this.login = this.login.bind(this);
   }
 
   login() {
-    const { username, password } = this.state
+    const { username, password } = this.state;
     if (username === password) {
-			this.props.dispatchLogin()
-      this.props.history.replace("/")
+      this.props.dispatchLogin();
+      this.props.history.replace("/");
     } else {
-      alert("Usuário ou senha incorretos!")
+      alert("Usuário ou senha incorretos!");
     }
   }
 
-  setField = ({ target }) => {
-    const obj = {}
-    obj[target.id] = target.value
-    this.setState(obj)
+  setField = ({ target }: any) => {
+    const obj: any = {};
+    obj[target.id] = target.value;
+    this.setState(obj);
   }
 
   render() {
@@ -78,14 +88,12 @@ class Login extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  dispatchLogin: () => {
-    dispatch(login())
-  }
-});
+const mapDispatchToProps = {
+  dispatchLogin: login,
+};
 
 export default connect(null, mapDispatchToProps)(Login);

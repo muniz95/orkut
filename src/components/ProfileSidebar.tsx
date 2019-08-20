@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/ProfileSidebar.scss'
 
-export default function ProfileSidebar(props) {
+interface IProps {
+  children: JSX.Element;
+}
+
+const ProfileSidebar = (props: IProps) => {
   return (
     <section className="main-content columns is-fullheight">
       <aside className="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
@@ -59,3 +63,5 @@ export default function ProfileSidebar(props) {
     </section>
   )
 }
+
+export default ProfileSidebar;

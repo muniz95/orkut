@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import Routes from './routes'
 import { connect } from 'react-redux'
 
-class App extends Component {
+interface IProps {
+  auth: any;
+}
+
+interface IState {
+  auth: any;
+}
+
+class App extends Component<IProps, IState> {
   render() {
     const { auth } = this.props
     console.log(auth)
@@ -14,7 +22,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: IState) => {
   const { auth } = state
   return {
     auth

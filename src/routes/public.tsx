@@ -6,7 +6,9 @@ import { Route } from 'react-router-dom'
 
 export default (
   <PublicLayout>
-    <Route exact path='/' component={Home} key="home" />
-    <Route path='/login' component={Login} key="login" />
+    <React.Fragment>
+      <Route exact path='/' component={Home} key="home" />
+      <Route path='/login' component={Login} key="login" />
+    </React.Fragment>
   </PublicLayout>
 )

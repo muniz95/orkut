@@ -13,7 +13,8 @@
       "property-declaration",
       "variable-declaration",
       "member-variable-declaration"
-    ]
+    ],
+    "member-access": false
   },
   "rulesDirectory": [],
   "linterOptions": {

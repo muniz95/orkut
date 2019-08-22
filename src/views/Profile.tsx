@@ -3,7 +3,7 @@ import ProfileSidebar from "../components/ProfileSidebar";
 import '../styles/Main.scss'
 
 export default class Main extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <ProfileSidebar>
         <div className="columns">
@@ -21,7 +21,7 @@ export default class Main extends Component {
             </p>
             <div className="tabs">
               <ul>
-                <li className="is-active"><a>Social</a></li>
+                <li className="is-active">Social</li>
               </ul>
             </div>
             <div className="tab-details">

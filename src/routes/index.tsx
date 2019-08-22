@@ -9,10 +9,6 @@ interface IProps {
 }
 
 class Routes extends Component<IProps, {}> {
-  constructor(props: IProps) {
-    super(props);
-  }
-
   render() {
     const { auth } = this.props;
     const routes = auth ? PrivateRoutes : PublicRoutes;

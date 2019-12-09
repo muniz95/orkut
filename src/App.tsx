@@ -1,32 +1,15 @@
-import React, { Component } from 'react'
-import Routes from './routes'
-import { connect } from 'react-redux'
+import React from "react";
+import { useSelector } from "react-redux";
+import Routes from "./routes";
 
-interface IProps {
-  auth: any;
-}
+const App: React.FC = () => {
+  const auth: boolean = useSelector((store: any) => store.auth);
+  return (
+    <div>
+      <Routes auth={auth} />
+    </div>
+  );
+};
 
-interface IState {
-  auth: any;
-}
-
-class App extends Component<IProps, IState> {
-  render() {
-    const { auth } = this.props
-    console.log(auth)
-    return (
-      <div>
-        <Routes auth={auth} />
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = (state: IState) => {
-  const { auth } = state
-  return {
-    auth
-  }
-}
-
-export default connect(mapStateToProps, null)(App)
+// export default connect(mapStateToProps, null)(App)
+export default App;

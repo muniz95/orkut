@@ -13,3 +13,8 @@ export const logout = () => {
   }
   return action
 }
+
+export default {
+  login,
+  logout,
+}

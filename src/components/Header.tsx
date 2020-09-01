@@ -1,23 +1,20 @@
 import React from "react"
-import { connect } from "react-redux"
+import act from '../modules/actions'
+import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { logout } from "../modules/actions"
 import "../styles/Header.scss"
+import { RootState } from "../modules/reducers"
 
-interface IProps {
-  auth: any;
-  dispatchLogout: () => void;
-}
-
-interface IState {
-  auth: any;
-}
-
-const Header = (props: IProps) => {
-  const { auth } = props;
+const Header = () => {
+  const auth = useSelector((state: RootState) => state.auth);
+  const dispatch = useDispatch();
+  const dispatchLogout = React.useCallback(
+    () => dispatch(act.logout()),
+    [dispatch]
+  );
   const btnAuth = auth
   ?
-    <button className="button is-text close-menu" onClick={props.dispatchLogout}>
+    <button className="button is-text close-menu" onClick={dispatchLogout}>
       <span className="icon">
         <i className="fa fa-sign-out"></i>
       </span>
@@ -65,15 +62,4 @@ const Header = (props: IProps) => {
   );
 };
 
-const mapStateToProps = (state: IState) => {
-  const { auth } = state;
-  return {
-    auth,
-  };
-};
-
-const mapDispatchToProps = {
-  dispatchLogout: logout,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

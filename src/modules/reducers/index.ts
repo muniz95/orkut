@@ -16,6 +16,10 @@ const auth = (state: boolean = true, action: IAction) => {
   }
 };
 
-export default combineReducers({
+const reducer = combineReducers({
   auth,
 });
+
+export type RootState = ReturnType<typeof reducer>;
+
+export default reducer;

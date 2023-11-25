@@ -1,9 +1,10 @@
 import React from 'react';
 import act from '../modules/actions';
 import { useDispatch } from 'react-redux';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Login = (props: RouteComponentProps) => {
+const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = React.useState('')
   const [password, setPassword] = React.useState('')
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Login = (props: RouteComponentProps) => {
   const login = () => {
     if (username === password) {
       dispatchLogin();
-      props.history.replace("/");
+      navigate("/");
     } else {
       alert("Usuário ou senha incorretos!");
     }
@@ -79,4 +80,4 @@ const Login = (props: RouteComponentProps) => {
   );
 }
 
-export default withRouter(Login);
+export default Login;
